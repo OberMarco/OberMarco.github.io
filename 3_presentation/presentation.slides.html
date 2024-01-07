@@ -7444,7 +7444,12 @@ main {
 <!-- jupyter-nbconvert --to slides presentation.ipynb --SlidesExporter.reveal_theme=white -->
 <style>
 .reveal .slides {
+    /* box-sizing: border-box; */
     width: 100% !important;
+     margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 </style>
 <!-- Schriftart -->
@@ -7457,7 +7462,7 @@ main {
 <style>
 .reveal .slides {
     background-image: url('background.png');
-     background-size: cover;
+     background-size: 100%100%;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -7584,8 +7589,10 @@ Hochschule Ansbach</p>
 <li>Electric peak load: <strong>2500 kW</strong></li>
 <li>Heating peak load: <strong>850 kW</strong></li>
 </ul>
-<iframe frameborder="0" height="250" src="../1_plot/Zeitreihe_Electricity Demand normalized to 1kW.html" width="100%"></iframe>
-<iframe frameborder="0" height="250" src="../1_plot/Zeitreihe_Heat Demand normalized to 1kW.html" width="100%"></iframe>
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="250vh" src="../1_plot/Zeitreihe_Electricity Demand normalized to 1kW.html" width="100%"></iframe>
+<iframe frameborder="0" height="250vh" src="../1_plot/Zeitreihe_Heat Demand normalized to 1kW.html" width="100%"></iframe>
+</div>
 </div>
 </div>
 </div>
@@ -7596,7 +7603,7 @@ Hochschule Ansbach</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Given-data:-Heat-Demand">Given data: Heat Demand<a class="anchor-link" href="#Given-data:-Heat-Demand">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Heat Demand normalized to 1kW.html" width="100%"></iframe>
+<h2 id="Given-data:-Heat-Demand">Given data: Heat Demand<a class="anchor-link" href="#Given-data:-Heat-Demand">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Heat Demand normalized to 1kW.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -7608,7 +7615,7 @@ Hochschule Ansbach</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Given-data:-electric-Demand">Given data: electric Demand<a class="anchor-link" href="#Given-data:-electric-Demand">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Electricity Demand normalized to 1kW.html" width="100%"></iframe>
+<h2 id="Given-data:-electric-Demand">Given data: electric Demand<a class="anchor-link" href="#Given-data:-electric-Demand">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Electricity Demand normalized to 1kW.html" width="100%"></iframe>
 ---
 
 
@@ -7635,9 +7642,11 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="System-Design">System Design<a class="anchor-link" href="#System-Design">¶</a></h2><ul>
 <li>Specific data: City <strong>Weißenburg</strong> (49°01'53.5"N 10°57'54.0"E), database year: <strong>2019</strong></li>
-<li>Backup and peak load system: Heating Element</li>
+<li>Backup and peak load system: Heating Element
+<img alt="System design" src="../2_doc/energy_system.svg" style="max-width: 100%; height: auto;"/></li>
 </ul>
-<h2 id=""><img alt="System design" src="../2_doc/energy_system.svg"/><a class="anchor-link" href="#">¶</a></h2>
+<!-- ![System design](../2_doc/energy_system.svg) -->
+<hr/>
 </div>
 </div>
 </div>
@@ -7653,8 +7662,8 @@ Hochschule Ansbach</p>
 <li>Normalized pv data (from PV-GIS 30 degree south)</li>
 <li>Normalized wind data (from renewables.ninja based on merra2, 1500kW GE1.7)</li>
 </ul>
-<iframe frameborder="0" height="250" src="../1_plot/Zeitreihe_Wind [norm kW].html" width="100%"></iframe>
-<iframe frameborder="0" height="250" src="../1_plot/Zeitreihe_PV [norm kWp].html" width="100%"></iframe>
+<iframe frameborder="0" height="250vh" src="../1_plot/Zeitreihe_Wind [norm kW].html" width="100%"></iframe>
+<iframe frameborder="0" height="250vh" src="../1_plot/Zeitreihe_PV [norm kWp].html" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -7669,7 +7678,7 @@ Hochschule Ansbach</p>
 <li>The weather station 5440 of the german weather service is located at Weissenburg-Emetzheim, it tracks the air temperature</li>
 <li>Air temperature of the year 2019</li>
 </ul>
-<iframe frameborder="0" height="500" src="../1_plot/Zeitreihe_Air temperature of german weather station DWD 5440.html" width="100%"></iframe>
+<iframe frameborder="0" height="500vh" src="../1_plot/Zeitreihe_Air temperature of german weather station DWD 5440.html" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -7684,7 +7693,7 @@ Hochschule Ansbach</p>
 <li>Interpolation of some points of a datasheet</li>
 <li>Minimum working temperature: -10°C Degree</li>
 </ul>
-<iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_COP based on temperature - common cop curve.html" width="100%"></iframe>
+<iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_COP based on temperature - common cop curve.html" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -7700,7 +7709,7 @@ Hochschule Ansbach</p>
 <li>Calculate for each temperature the cop</li>
 <li>Normalized the mean COP on the yearly used cop of a heatpump (not every heatpump offers data about temperature dependent cop)</li>
 </ol>
-<iframe frameborder="0" height="500" src="../1_plot/Zeitreihe_COP based on temperature 2019.html" width="100%"></iframe>
+<iframe frameborder="0" height="500vh" src="../1_plot/Zeitreihe_COP based on temperature 2019.html" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -7992,7 +8001,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- cost opmizized-->
-<h2 id="Sankey-Diagramm:-Optimal-size---cost-optimized">Sankey Diagramm: Optimal size - cost optimized<a class="anchor-link" href="#Sankey-Diagramm:-Optimal-size---cost-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/sankey_diagramm_optimal_size_cost_optimized.html" width="100%"></iframe>
+<h2 id="Sankey-Diagramm:-Optimal-size---cost-optimized">Sankey Diagramm: Optimal size - cost optimized<a class="anchor-link" href="#Sankey-Diagramm:-Optimal-size---cost-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/sankey_diagramm_optimal_size_cost_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8005,7 +8014,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Energy-Schedule:-Optimal-size---cost-optimized">Energy Schedule: Optimal size - cost optimized<a class="anchor-link" href="#Energy-Schedule:-Optimal-size---cost-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Energy schedule optimal_size_cost_optimized.html" width="100%"></iframe>
+<h2 id="Energy-Schedule:-Optimal-size---cost-optimized">Energy Schedule: Optimal size - cost optimized<a class="anchor-link" href="#Energy-Schedule:-Optimal-size---cost-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Energy schedule optimal_size_cost_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8018,7 +8027,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Seasonal-storage:-optimal-size---cost-optimized">Seasonal storage: optimal size - cost optimized<a class="anchor-link" href="#Seasonal-storage:-optimal-size---cost-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Monthly energy volumes of the heat storage optimal_size_cost_optimized.html" width="100%"></iframe>
+<h2 id="Seasonal-storage:-optimal-size---cost-optimized">Seasonal storage: optimal size - cost optimized<a class="anchor-link" href="#Seasonal-storage:-optimal-size---cost-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Monthly energy volumes of the heat storage optimal_size_cost_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8031,7 +8040,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Sankey-Diagramm:-Optimal-size---co2-optimized">Sankey Diagramm: Optimal size - co2 optimized<a class="anchor-link" href="#Sankey-Diagramm:-Optimal-size---co2-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/sankey_diagramm_optimal_size_co2_optimized.html" width="100%"></iframe>
+<h2 id="Sankey-Diagramm:-Optimal-size---co2-optimized">Sankey Diagramm: Optimal size - co2 optimized<a class="anchor-link" href="#Sankey-Diagramm:-Optimal-size---co2-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/sankey_diagramm_optimal_size_co2_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8044,7 +8053,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Energy-Schedule:-Optimal-size---co2-optimized">Energy Schedule: Optimal size - co2 optimized<a class="anchor-link" href="#Energy-Schedule:-Optimal-size---co2-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Energy schedule optimal_size_co2_optimized.html" width="100%"></iframe>
+<h2 id="Energy-Schedule:-Optimal-size---co2-optimized">Energy Schedule: Optimal size - co2 optimized<a class="anchor-link" href="#Energy-Schedule:-Optimal-size---co2-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Energy schedule optimal_size_co2_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8057,7 +8066,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Seasonal-storage:-Optimal-size---co2-optimized">Seasonal storage: Optimal size - co2 optimized<a class="anchor-link" href="#Seasonal-storage:-Optimal-size---co2-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Monthly energy volumes of the heat storage optimal_size_co2_optimized.html" width="100%"></iframe>
+<h2 id="Seasonal-storage:-Optimal-size---co2-optimized">Seasonal storage: Optimal size - co2 optimized<a class="anchor-link" href="#Seasonal-storage:-Optimal-size---co2-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Monthly energy volumes of the heat storage optimal_size_co2_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8070,7 +8079,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Sankey-Diagramm:-Real-world---cost-optimized">Sankey Diagramm: Real world - cost optimized<a class="anchor-link" href="#Sankey-Diagramm:-Real-world---cost-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/sankey_diagramm_real_world_cost_optimized.html" width="100%"></iframe>
+<h2 id="Sankey-Diagramm:-Real-world---cost-optimized">Sankey Diagramm: Real world - cost optimized<a class="anchor-link" href="#Sankey-Diagramm:-Real-world---cost-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/sankey_diagramm_real_world_cost_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8083,7 +8092,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Energy-Schedule:-Real-world---cost-optimized">Energy Schedule: Real world - cost optimized<a class="anchor-link" href="#Energy-Schedule:-Real-world---cost-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Energy schedule real_world_cost_optimized.html" width="100%"></iframe>
+<h2 id="Energy-Schedule:-Real-world---cost-optimized">Energy Schedule: Real world - cost optimized<a class="anchor-link" href="#Energy-Schedule:-Real-world---cost-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Energy schedule real_world_cost_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8096,7 +8105,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Seasonal-storage:-Real-world---cost-optimized">Seasonal storage: Real world - cost optimized<a class="anchor-link" href="#Seasonal-storage:-Real-world---cost-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Monthly energy volumes of the heat storage real_world_cost_optimized.html" width="100%"></iframe>
+<h2 id="Seasonal-storage:-Real-world---cost-optimized">Seasonal storage: Real world - cost optimized<a class="anchor-link" href="#Seasonal-storage:-Real-world---cost-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Monthly energy volumes of the heat storage real_world_cost_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8109,7 +8118,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Sankey-Diagramm:-Real-world---co2-optimized">Sankey Diagramm: Real world - co2 optimized<a class="anchor-link" href="#Sankey-Diagramm:-Real-world---co2-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/sankey_diagramm_real_world_co2_optimized.html" width="100%"></iframe>
+<h2 id="Sankey-Diagramm:-Real-world---co2-optimized">Sankey Diagramm: Real world - co2 optimized<a class="anchor-link" href="#Sankey-Diagramm:-Real-world---co2-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/sankey_diagramm_real_world_co2_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8122,7 +8131,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Energy-Schedule:-Real-world---co2-optimized">Energy Schedule: Real world - co2 optimized<a class="anchor-link" href="#Energy-Schedule:-Real-world---co2-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Energy schedule real_world_co2_optimized.html" width="100%"></iframe>
+<h2 id="Energy-Schedule:-Real-world---co2-optimized">Energy Schedule: Real world - co2 optimized<a class="anchor-link" href="#Energy-Schedule:-Real-world---co2-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Energy schedule real_world_co2_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
@@ -8135,7 +8144,7 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Seasonal-storage:-Real-world---co2-optimized">Seasonal storage: Real world - co2 optimized<a class="anchor-link" href="#Seasonal-storage:-Real-world---co2-optimized">¶</a></h2><iframe frameborder="0" height="550" src="../1_plot/Zeitreihe_Monthly energy volumes of the heat storage real_world_co2_optimized.html" width="100%"></iframe>
+<h2 id="Seasonal-storage:-Real-world---co2-optimized">Seasonal storage: Real world - co2 optimized<a class="anchor-link" href="#Seasonal-storage:-Real-world---co2-optimized">¶</a></h2><iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Monthly energy volumes of the heat storage real_world_co2_optimized.html" width="100%"></iframe>
 <hr/>
 </div>
 </div>
