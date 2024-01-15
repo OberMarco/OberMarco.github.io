@@ -7474,12 +7474,18 @@ iframe {
     background-position: center center;
     background-repeat: no-repeat;
 }
+.reveal .background2 {
+    background-image: url('background2.png');
+     background-size: 100%100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 </style>
 <!-- Fußzeile -->
 <style>
 .reveal .slides > section:after {
-    content: "Marco Obermeier - Energy Management with AI Methods";
-    font-size: 10px;
+    content: "Natalie Ismahil, Lorenz ? und Marco Obermeier - Vorhersage der Photoltaikleistung mithilfe LSTM";
+    font-size: 2.5vh;
     position: absolute;
     font-family: 'Arial', sans-serif;
     bottom: -20px;
@@ -7497,7 +7503,7 @@ dateElement.style.position = 'absolute';
 dateElement.style.bottom = '-20px';
 dateElement.style.left = '0';
 dateElement.style.padding = '10px';
-dateElement.style.fontSize = '10px';
+dateElement.style.fontSize = '2.5vh';
 dateElement.style.fontFamily = 'Arial, sans-serif';
 dateElement.style.textAlign = 'right';
 dateElement.style.color = '#000';
@@ -7515,11 +7521,18 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<!-- .slide: data-background="background2.png" -->
+<!-- <div class="background2"> -->
 <!-- Slide 1 -->
-<h2 id="Projectwork-LSTM">Projectwork LSTM<a class="anchor-link" href="#Projectwork-LSTM">¶</a></h2><p>Natalie, Lorzenz and Marco Obermeier<br/>
+<hr/>
+<h2 id="Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">Vorhersage der Photovoltaikleistung mithilfe eines Long Short-Term Memory (LSTM)<a class="anchor-link" href="#Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">¶</a></h2><p>Natalie Ismahil, Lorenz and Marco Obermeier<br/>
 Master Module Angewandte Künstliche Intelligenz I
 Hochschule Ansbach</p>
+<figure>
+<img alt="QR-Code" src="qrcode.svg"/>
+<figcaption>QR-Code für interaktive Präsentationsfolien</figcaption>
+</figure>
+<!-- 
+![QR-Code](qrcode.svg) -->
 <hr/>
 </div>
 </div>
@@ -7533,6 +7546,7 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- jupyter-nbconvert --to slides project.ipynb -->
 <!-- Slide 2 -->
+<hr/>
 <h2 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h2><h3 id="1.-Buiness-Understanding">1. Buiness Understanding<a class="anchor-link" href="#1.-Buiness-Understanding">¶</a></h3><h3 id="2.-Data-Understanding">2. Data Understanding<a class="anchor-link" href="#2.-Data-Understanding">¶</a></h3><h3 id="3.-Data-Prepartion">3. Data Prepartion<a class="anchor-link" href="#3.-Data-Prepartion">¶</a></h3><h3 id="4.-Model">4. Model<a class="anchor-link" href="#4.-Model">¶</a></h3><h3 id="5.-Evaluation">5. Evaluation<a class="anchor-link" href="#5.-Evaluation">¶</a></h3><h3 id="6.-Deployment">6. Deployment<a class="anchor-link" href="#6.-Deployment">¶</a></h3><hr/>
 </div>
 </div>
@@ -7589,6 +7603,22 @@ Hochschule Ansbach</p>
 </ul>
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 <iframe frameborder="0" height="550vh" src="https://wandb.ai/obi712/LSTM-Project/reports/loss-24-01-15-13-38-38---Vmlldzo2NTIxODc5?accessToken=9jhrkhlltsv72lr2wyuysx4y5mm8k4coqk2wb5crjidzi1l24y08rdnuyzqw0fph" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Evaluierung">Evaluierung<a class="anchor-link" href="#Evaluierung">¶</a></h2><ul>
+<li>Bestes Ergebnis mit unbekannten Daten</li>
+</ul>
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Lstm.html" width="100%"></iframe>
 </div>
 </div>
 </div>
