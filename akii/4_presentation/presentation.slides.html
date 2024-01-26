@@ -7442,6 +7442,77 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide Einstellungen -->
 <!-- jupyter-nbconvert --to slides presentation.ipynb --SlidesExporter.reveal_theme=white -->
+<!-- Textbox für Überschriften slide  -->
+<style>
+h1 {
+    color: #6d1f80 ;  /* Set the color to teal */
+}
+</style>
+<style>
+.text-box-picture {
+  position: fixed;
+  top: 18%;
+  left: 0%;
+  width: 100%;
+  /* border: 3px solid #73AD21; */
+  padding: 1%;
+  background-color: white;
+}
+
+
+
+.text-box-title {
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  width: 90%;
+  /* border: 3px solid #73AD21; */
+  padding: 1%;
+  background-color: white;
+}
+</style>
+<style>
+.text-box-heading {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  width: 60%;
+  /* border: 3px solid #73AD21; */
+  padding: 1%;
+  background-color: white;
+}
+</style>
+<style>
+.text-box-title h1 {
+  color: #6d1f80;
+}
+.text-box-title h2 {
+  color: #6d1f80;
+}
+.text-box-title h3 {
+  color: #6d1f80;
+}
+</style>
+<style>
+.text-box-heading h4 {
+  color: #6d1f80;
+}
+</style>
+<style>
+.text-box-heading h3 {
+  color: #6d1f80;
+}
+</style>
+<style>
+.text-box-heading h2 {
+  color: #6d1f80;
+}
+</style>
+<style>
+.text-box-heading h1 {
+  color: #6d1f80;
+}
+</style>
 <style>
 iframe {
     display: flex;
@@ -7522,14 +7593,15 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- <div class="background2"> -->
+<div class="text-box-heading">
+<h2 id="Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">Vorhersage der Photovoltaikleistung mithilfe eines Long Short-Term Memory (LSTM)<a class="anchor-link" href="#Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">¶</a></h2></div>
 <!-- Slide 1 -->
 <hr/>
-<h2 id="Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">Vorhersage der Photovoltaikleistung mithilfe eines Long Short-Term Memory (LSTM)<a class="anchor-link" href="#Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">¶</a></h2><p>Natalie Ismahil, Lorenz and Marco Obermeier<br/>
-Master Module Angewandte Künstliche Intelligenz I
-Hochschule Ansbach</p>
+<p><strong>Natalie Ismahil, Lorenz and Marco Obermeier</strong><br/>
+<em>Master Modul Angewandte Künstliche Intelligenz I an Hochschule Ansbach</em></p>
 <figure>
 <img alt="QR-Code" src="qrcode.svg"/>
-<figcaption>QR-Code für interaktive Präsentationsfolien</figcaption>
+<figcaption>QR-Code für interaktive Präsentationsfolien (Bei Darstellungsfehler ggf. aktuallieren des Browsers [F5])</figcaption>
 </figure>
 <!-- 
 ![QR-Code](qrcode.svg) -->
@@ -7546,8 +7618,10 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- jupyter-nbconvert --to slides project.ipynb -->
 <!-- Slide 2 -->
+<div class="text-box-heading">
+<h2 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h2></div>
 <hr/>
-<h2 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h2><h3 id="1.-Buiness-Understanding">1. Buiness Understanding<a class="anchor-link" href="#1.-Buiness-Understanding">¶</a></h3><h3 id="2.-Data-Understanding">2. Data Understanding<a class="anchor-link" href="#2.-Data-Understanding">¶</a></h3><h3 id="3.-Data-Prepartion">3. Data Prepartion<a class="anchor-link" href="#3.-Data-Prepartion">¶</a></h3><h3 id="4.-Model">4. Model<a class="anchor-link" href="#4.-Model">¶</a></h3><h3 id="5.-Evaluation">5. Evaluation<a class="anchor-link" href="#5.-Evaluation">¶</a></h3><h3 id="6.-Deployment">6. Deployment<a class="anchor-link" href="#6.-Deployment">¶</a></h3><hr/>
+<h3 id="1.-Buiness-Understanding">1. Buiness Understanding<a class="anchor-link" href="#1.-Buiness-Understanding">¶</a></h3><h3 id="2.-Data-Understanding">2. Data Understanding<a class="anchor-link" href="#2.-Data-Understanding">¶</a></h3><h3 id="3.-Data-Prepartion">3. Data Prepartion<a class="anchor-link" href="#3.-Data-Prepartion">¶</a></h3><h3 id="4.-Model">4. Model<a class="anchor-link" href="#4.-Model">¶</a></h3><h3 id="5.-Evaluation">5. Evaluation<a class="anchor-link" href="#5.-Evaluation">¶</a></h3><h3 id="6.-Deployment">6. Deployment<a class="anchor-link" href="#6.-Deployment">¶</a></h3><hr/>
 </div>
 </div>
 </div>
@@ -7558,7 +7632,51 @@ Hochschule Ansbach</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Buiness-Understanding">Buiness Understanding<a class="anchor-link" href="#Buiness-Understanding">¶</a></h1>
+<div class="text-box-title">
+<h1 id="Buiness-Understanding">Buiness Understanding<a class="anchor-link" href="#Buiness-Understanding">¶</a></h1></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-heading">
+<h2 id="Buiness-Understanding:-Forecasting">Buiness Understanding: Forecasting<a class="anchor-link" href="#Buiness-Understanding:-Forecasting">¶</a></h2><div style="margin-top:5.5%">
+<ul>
+<li>Wichtige Begriffe Forecasting</li></ul></div>
+
+
+<img alt="No description has been provided for this image" height="auto" src="../6_docu/concept_pic.svg" width="90%"/>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-heading">
+<h2 id="Buiness-Understanding:-Photovoltaik">Buiness Understanding: Photovoltaik<a class="anchor-link" href="#Buiness-Understanding:-Photovoltaik">¶</a></h2></div>
+<hr/>
+<hr/>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-title">
+<h1 id="Data-Understanding">Data Understanding<a class="anchor-link" href="#Data-Understanding">¶</a></h1></div>
 </div>
 </div>
 </div>
@@ -7570,7 +7688,74 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Buiness-Understanding">Buiness Understanding<a class="anchor-link" href="#Buiness-Understanding">¶</a></h2>
+<div class="text-box-heading">
+<h2 id="Data-Understanding:-Wetterdaten">Data Understanding: Wetterdaten<a class="anchor-link" href="#Data-Understanding:-Wetterdaten">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Wetterdaten des Satelitten NASA MERRA-2</li>
+<li>API von Solcast von verarbeiteten Rohdaten</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe allow="autoplay; loop" frameborder="0" height="500vh" src="https://media.solcast.com/latest/global/1280x720.mp4?time=1635940800000?autoplay=1?loop=1" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Data-Understanding:-Photovoltaikdaten">Data Understanding: Photovoltaikdaten<a class="anchor-link" href="#Data-Understanding:-Photovoltaikdaten">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>50 kWp PV-Anlage am Campus Feuchtwangen</li>
+<li>Aufnahme von 2 verschiedenen Datenpunkten der Photovoltaikleistung in minütlichen Intervallen</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="https://www.campus-feuchtwangen.de/de/forschungshalle/#iLightbox[f54b109d7bcb177113b]/0" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Data-Understanding:-Rohdaten">Data Understanding: Rohdaten<a class="anchor-link" href="#Data-Understanding:-Rohdaten">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Stündliche Intervalle über 3,5 Jahre</li>
+<li>Datenqualität: negative Werte, Ausreißer, Messerfehler</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Rohdaten.html" width="100%"></iframe>
+</div>
+<hr/>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-title">
+<h1 id="Data-Preparation">Data Preparation<a class="anchor-link" href="#Data-Preparation">¶</a></h1></div>
 </div>
 </div>
 </div>
@@ -7582,24 +7767,109 @@ Hochschule Ansbach</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide 3 -->
-<h2 id="Hyperparameter-Visualization">Hyperparameter Visualization<a class="anchor-link" href="#Hyperparameter-Visualization">¶</a></h2><ul>
-<li>Test von 440 verschiedenen Hyperparameterkonfigurationen</li>
-</ul>
+<div class="text-box-heading">
+<h2 id="Data-Preparation:-Korrelationsmatrix">Data Preparation: Korrelationsmatrix<a class="anchor-link" href="#Data-Preparation:-Korrelationsmatrix">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Einige Features korrelieren → Duplikate bzw. unötige Doppeltinformationen</li>
+<li>Einige Features gegen → Kein Informationsgehalt im Zusammenhang zur Zielvariable</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../0_data/heatmap_extended.html" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Data-Preparation:-Korrelationsmatrix">Data Preparation: Korrelationsmatrix<a class="anchor-link" href="#Data-Preparation:-Korrelationsmatrix">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Nach Bereinigung der Features</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../0_data/heatmap.html" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-title">
+<h1 id="Modeling">Modeling<a class="anchor-link" href="#Modeling">¶</a></h1></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Modeling">Modeling<a class="anchor-link" href="#Modeling">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>1-6 Layer LSTM, 1 lineare Ausgabe Schicht, 1 - 48 Sequenzen</li>
+<li>Multi Time Horrizon</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<image frameborder="0" height="auto" src="../6_docu/model.svg" width="70%"/>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Modeling:-Hyperparameter">Modeling: Hyperparameter<a class="anchor-link" href="#Modeling:-Hyperparameter">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Test von verschiedenen Hyperparameterkonfigurationen</li></ul></div>
+
+
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 <iframe frameborder="0" height="550vh" src="../3_hyperparamter_viszualizations/hyperparameter_visualization.html" width="100%"></iframe>
 </div>
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Weights-and-Bias">Weights and Bias<a class="anchor-link" href="#Weights-and-Bias">¶</a></h2><ul>
-<li>Test von 440 verschiedenen Hyperparameterkonfigurationen</li>
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Modeling:-Weights-&amp;-Biases">Modeling: Weights &amp; Biases<a class="anchor-link" href="#Modeling:-Weights-&amp;-Biases">¶</a></h2></div>
+<ul>
+<li>Beobachten und Tracking des Lernprozesses mit Weights &amp; Biases</li>
+<li>Early Stopping und Learning Rate Decay</li>
 </ul>
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 <iframe frameborder="0" height="550vh" src="https://wandb.ai/obi712/LSTM-Project/reports/loss-24-01-15-13-38-38---Vmlldzo2NTIxODc5?accessToken=9jhrkhlltsv72lr2wyuysx4y5mm8k4coqk2wb5crjidzi1l24y08rdnuyzqw0fph" width="100%"></iframe>
@@ -7614,12 +7884,131 @@ Hochschule Ansbach</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Evaluierung">Evaluierung<a class="anchor-link" href="#Evaluierung">¶</a></h2><ul>
-<li>Bestes Ergebnis mit unbekannten Daten</li>
-</ul>
+<div class="text-box-title">
+<h1 id="Evaluation">Evaluation<a class="anchor-link" href="#Evaluation">¶</a></h1></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Evaluation-LSTM">Evaluation LSTM<a class="anchor-link" href="#Evaluation-LSTM">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Verwendung von Wettervorhersagen statt historischen Wetterdaten</li>
+<li>Keine Updates der Gewichte und Ausführung auf einem anderen Rechner Berechnung über die CPU</li>
+<li>Metrik RMSE →  Konsistenz  der Einheit</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Deployment LSTM RMSE 4010.155729395651.html" width="100%"></iframe>
+</div>
+<hr/>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Evaluation-ML">Evaluation ML<a class="anchor-link" href="#Evaluation-ML">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Verwendung von Wettervorhersagen statt historischen Wetterdaten</li>
+<li>Keine Updates der Gewichte und Ausführung auf einem anderen Rechner Berechnung über die CPU</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Deployment LSTM RMSE 4010.155729395651.html" width="100%"></iframe>
+</div>
+<hr/>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Evaluation-LSTM:-Shift-Fehler">Evaluation LSTM: Shift Fehler<a class="anchor-link" href="#Evaluation-LSTM:-Shift-Fehler">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Extrem gute Ergebnisse unter einem Fehler</li></ul></div>
+
+
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 <iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Lstm.html" width="100%"></iframe>
 </div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-title">
+<h1 id="Deployment">Deployment<a class="anchor-link" href="#Deployment">¶</a></h1></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h2 id="Deployment">Deployment<a class="anchor-link" href="#Deployment">¶</a></h2></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Verwendung von Wettervorhersagen statt historischen Wetterdaten</li>
+<li>Keine Updates der Gewichte und Ausführung auf einem anderen Rechner Berechnung über die CPU</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Deployment LSTM RMSE 4010.155729395651.html" width="100%"></iframe>
+</div>
+<hr/>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>

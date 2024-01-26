@@ -1,0 +1,12 @@
+# Ignore all files with .csv extension
+*.csv
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.pdf
+*.pptx
+*.ppt
+*.txt
+*.py
+*.ipynb
