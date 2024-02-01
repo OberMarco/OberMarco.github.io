@@ -7483,11 +7483,23 @@ h1 {
 
 
 @media screen and (max-width: 1400px) {
-  .text-box-picture, .text-box-title, .text-box-heading {
+  .text-box-picture {
     position: static;
-    width: 30%;
+    width: 100%;
     padding: 1%;
   }
+  .text-box-title{
+    position: static;
+    width: 90%;
+    padding: 1%;
+  }
+  .text-box-heading {
+    position: static;
+    width: 60%;
+    padding: 1%;
+  }
+
+
 }
 
 </style>
@@ -7998,7 +8010,51 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 </ul>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-<iframe frameborder="0" height="500vh" src="../1_plots/Zeitreihe_Deployment LSTM RMSE 4010.155729395651.html" width="100%"></iframe>
+<iframe frameborder="0" height="500vh" src="../1_plots/Zeitreihe_Lstm rmse_1132.9080208111109, Learningrate_0.0001, Sequenzen_48, Layer_1 Epochen_38, hidden_size_15, feature_set_feature_set0, prediction_column_pv_power2_n+1.html" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h3 id="Evaluation-LSTM">Evaluation LSTM<a class="anchor-link" href="#Evaluation-LSTM">¶</a></h3></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Metrik RMSE →  Konsistenz  der Einheit</li>
+<li>Single Horizon: eine Stunde in die Zukunft (n+3)</li>
+</ul>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="500vh" src="../1_plots/Zeitreihe_Lstm rmse_1151.4273223388366, Learningrate_0.0001, Sequenzen_192, Layer_1 Epochen_17, hidden_size_15, feature_set_feature_set0, prediction_column_pv_power2_n+3.html" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h3 id="Evaluation-LSTM">Evaluation LSTM<a class="anchor-link" href="#Evaluation-LSTM">¶</a></h3></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Multi Horizon: ein Zeitraum von 12 Stunden in die Zukunft (n+1 - n+12)</li>
+<li>RMSE</li>
+</ul>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="500vh" src="../1_plots/multitime.html" width="100%"></iframe>
 </div>
 </div>
 </div>
