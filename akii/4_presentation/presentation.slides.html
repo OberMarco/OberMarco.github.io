@@ -7442,13 +7442,6 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide Einstellungen -->
 <!-- jupyter-nbconvert --to slides presentation.ipynb --SlidesExporter.reveal_theme=white -->
-<p>@media screen and (max-width: 600px) {
-.text-box-picture, .text-box-title, .text-box-heading {
-position: static;
-width: 100%;
-padding: 1%;
-}
-}</p>
 <!-- Textbox für Überschriften slide  -->
 <style>
 h1 {
@@ -7467,6 +7460,16 @@ h1 {
 }
 
 
+.text-box-heading {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  width: 60%;
+  /* border: 3px solid #73AD21; */
+  padding: 1%;
+  background-color: white;
+}
+
 
 .text-box-title {
   position: fixed;
@@ -7477,17 +7480,16 @@ h1 {
   padding: 1%;
   background-color: white;
 }
-</style>
-<style>
-.text-box-heading {
-  position: fixed;
-  top: 0;
-  left: 10%;
-  width: 60%;
-  /* border: 3px solid #73AD21; */
-  padding: 1%;
-  background-color: white;
+
+
+@media screen and (max-width: 1400px) {
+  .text-box-picture, .text-box-title, .text-box-heading {
+    position: static;
+    width: 100%;
+    padding: 1%;
+  }
 }
+
 </style>
 <style>
 .text-box-title h1 {
@@ -7562,7 +7564,7 @@ iframe {
 <!-- Fußzeile -->
 <style>
 .reveal .slides > section:after {
-    content: "Natalie Ismahil, Lorenz ? und Marco Obermeier - Vorhersage der Photoltaikleistung mithilfe LSTM";
+    content: "Natalie Ismahil, Lorenz Lischewski und Marco Obermeier - Vorhersage der Photoltaikleistung mithilfe LSTM";
     font-size: 13px;
     position: absolute;
     font-family: 'Arial', sans-serif;
@@ -7599,13 +7601,25 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-title">
+<h1 id="Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">Vorhersage der Photovoltaikleistung mithilfe eines Long Short-Term Memory (LSTM)<a class="anchor-link" href="#Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">¶</a></h1></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- <div class="background2"> -->
 <div class="text-box-heading">
 <h3 id="Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">Vorhersage der Photovoltaikleistung mithilfe eines Long Short-Term Memory (LSTM)<a class="anchor-link" href="#Vorhersage-der-Photovoltaikleistung-mithilfe-eines-Long-Short-Term-Memory-(LSTM)">¶</a></h3></div>
 <!-- Slide 1 -->
 <hr/>
-<p><strong>Natalie Ismahil, Lorenz and Marco Obermeier</strong><br/>
-<em>Master Modul Angewandte Künstliche Intelligenz I an Hochschule Ansbach</em></p>
+<p><strong>Natalie Ismahil, Lorenz Lischewski und Marco Obermeier</strong><br/>
+<em>Master Modul Angewandte Künstliche Intelligenz I: Hochschule Ansbach</em></p>
 <figure>
 <img alt="QR-Code" src="qrcode.svg"/>
 <figcaption>QR-Code für interaktive Präsentationsfolien (Bei Darstellungsfehler ggf. aktuallieren des Browsers [F5])</figcaption>
@@ -7628,11 +7642,40 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <div class="text-box-heading">
 <h3 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h3></div>
 <hr/>
-<h3 id="1.-Buiness-Understanding">1. Buiness Understanding<a class="anchor-link" href="#1.-Buiness-Understanding">¶</a></h3><h3 id="2.-Data-Understanding">2. Data Understanding<a class="anchor-link" href="#2.-Data-Understanding">¶</a></h3><h3 id="3.-Data-Prepartion">3. Data Prepartion<a class="anchor-link" href="#3.-Data-Prepartion">¶</a></h3><h3 id="4.-Model">4. Model<a class="anchor-link" href="#4.-Model">¶</a></h3><h3 id="5.-Evaluation">5. Evaluation<a class="anchor-link" href="#5.-Evaluation">¶</a></h3><h3 id="6.-Deployment">6. Deployment<a class="anchor-link" href="#6.-Deployment">¶</a></h3><hr/>
+<h3 id="0.-Basics-LSTM">0. Basics LSTM<a class="anchor-link" href="#0.-Basics-LSTM">¶</a></h3><h3 id="1.-Buiness-Understanding">1. Buiness Understanding<a class="anchor-link" href="#1.-Buiness-Understanding">¶</a></h3><h3 id="2.-Data-Understanding">2. Data Understanding<a class="anchor-link" href="#2.-Data-Understanding">¶</a></h3><h3 id="3.-Data-Prepartion">3. Data Prepartion<a class="anchor-link" href="#3.-Data-Prepartion">¶</a></h3><h3 id="4.-Model">4. Model<a class="anchor-link" href="#4.-Model">¶</a></h3><h3 id="5.-Evaluation">5. Evaluation<a class="anchor-link" href="#5.-Evaluation">¶</a></h3><h3 id="6.-Deployment">6. Deployment<a class="anchor-link" href="#6.-Deployment">¶</a></h3><hr/>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-title">
+<h1 id="Basics-LSTM">Basics LSTM<a class="anchor-link" href="#Basics-LSTM">¶</a></h1></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-heading">
+<h3 id="Basics-LSTM:-Aufbei-einer-LSTM-Zelle">Basics LSTM: Aufbei einer LSTM Zelle<a class="anchor-link" href="#Basics-LSTM:-Aufbei-einer-LSTM-Zelle">¶</a></h3><div style="margin-top:5.5%">
+<ul>
+<li>Bild Natalie</li></ul></div>
+
+
+<img alt="No description has been provided for this image" height="auto" src="../6_docu/concept_pic.svg" width="90%"/>
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7767,6 +7810,48 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 </div>
 </div>
 </div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-heading">
+<h3 id="Data-Preparation:-Traingsdaten">Data Preparation: Traingsdaten<a class="anchor-link" href="#Data-Preparation:-Traingsdaten">¶</a></h3></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Von 2020 bis 2022</li>
+<li>Entfernen von negativen Werten in der Zielvariable</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Trainingsdaten.html" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-heading">
+<h3 id="Data-Preparation:-Testdaten">Data Preparation: Testdaten<a class="anchor-link" href="#Data-Preparation:-Testdaten">¶</a></h3></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Von 2022 bis 2023</li>
+<li>Ungesehen für Evaluierung</li></ul></div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Testdaten.html" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7908,8 +7993,6 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <h3 id="Evaluation-LSTM">Evaluation LSTM<a class="anchor-link" href="#Evaluation-LSTM">¶</a></h3></div>
 <div style="margin-top:5.5%">
 <ul>
-<li>Verwendung von Wettervorhersagen statt historischen Wetterdaten</li>
-<li>Keine Updates der Gewichte und Ausführung auf einem anderen Rechner Berechnung über die CPU</li>
 <li>Metrik RMSE →  Konsistenz  der Einheit</li></ul></div>
 
 
@@ -7932,14 +8015,34 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <h3 id="Evaluation-ML">Evaluation ML<a class="anchor-link" href="#Evaluation-ML">¶</a></h3></div>
 <div style="margin-top:5.5%">
 <ul>
-<li>Verwendung von Wettervorhersagen statt historischen Wetterdaten</li>
-<li>Keine Updates der Gewichte und Ausführung auf einem anderen Rechner Berechnung über die CPU</li></ul></div>
+<li>Single Horizon: eine Stunde in die Zukunft (n+1)</li>
+<li>Randomforest besser als bisheriger LSTM</li></ul></div>
 
 
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Deployment LSTM RMSE 4010.155729395651.html" width="100%"></iframe>
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_PV-Vorhersage, RMSE_830.2, Prediction target_pv_power2_n+1.html" width="100%"></iframe>
 </div>
-<hr/>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h3 id="Evaluation-ML">Evaluation ML<a class="anchor-link" href="#Evaluation-ML">¶</a></h3></div>
+<div style="margin-top:5.5%">
+<ul>
+<li>Single Horizon: 24 Stunden in die Zukunft (n+24)</li>
+</ul>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_PV-Vorhersage, RMSE_1139.9, Prediction target_pv_power2_n+24.html" width="100%"></iframe>
+</div>
 </div>
 </div>
 </div>
@@ -7989,9 +8092,9 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <div style="margin-top:5.5%">
 <ul>
 <li>Verwendung von Wettervorhersagen statt historischen Wetterdaten</li>
-<li>Keine Updates der Gewichte und Ausführung auf einem anderen Rechner Berechnung über die CPU</li></ul></div>
-
-
+<li>Keine Updates der Gewichte und Ausführung auf einem anderen Rechner Berechnung über die CPU</li>
+</ul>
+</div>
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 <iframe frameborder="0" height="550vh" src="../1_plots/Zeitreihe_Deployment LSTM RMSE 4010.155729395651.html" width="100%"></iframe>
 </div>
