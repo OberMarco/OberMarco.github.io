@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e" scale="5" border="0">
+    <diagram id="FgpiK9OE_3OYkIBHCV0x" name="Page-1">
+        <mxGraphModel dx="796" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="682" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=23;" parent="1" source="680" target="681" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="680" value="Model" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=Garamond;html=1;whiteSpace=wrap;fontSize=23;rotation=0;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="118.56" width="300" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="681" value="Zukünftige PV-Leistung" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=Garamond;html=1;whiteSpace=wrap;fontSize=23;rotation=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="133.56" width="156.07" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="687" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=23;" parent="1" source="683" target="680" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="683" value="Historische Daten der PV-Erzeugung" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=Garamond;html=1;whiteSpace=wrap;fontSize=23;rotation=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="29.999999999999886" y="36.43999999999999" width="156.07" height="97.12" as="geometry"/>
+                </mxCell>
+                <mxCell id="688" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=23;" parent="1" source="684" target="680" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="684" value="Historische Wetterdaten" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=Garamond;html=1;whiteSpace=wrap;fontSize=23;rotation=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="29.999999999999886" y="160" width="156.07" height="97.12" as="geometry"/>
+                </mxCell>
+                <mxCell id="689" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=23;" parent="1" source="685" target="680" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="685" value="Wetter-vorhersage" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=Garamond;html=1;whiteSpace=wrap;fontSize=23;rotation=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="29.999999999999886" y="283.56" width="156.07" height="97.12" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
