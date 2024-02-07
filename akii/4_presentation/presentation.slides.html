@@ -8001,7 +8001,7 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <h3 id="Modeling:-Training">Modeling: Training<a class="anchor-link" href="#Modeling:-Training">¶</a></h3></div>
 <div class=".text_box-bulletpoints">
 <ul>
-<li>Verwendung von historischen Wetterdaten</li></ul></div>
+<li>Training mit historischen Wetterdaten und historischen Erzeugungsdaten</li></ul></div>
 
 
 <img alt="No description has been provided for this image" height="450vh" src="../6_docu/Training.svg" width="100%"/>
@@ -8097,12 +8097,13 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <h3 id="Evaluation-LSTM">Evaluation LSTM<a class="anchor-link" href="#Evaluation-LSTM">¶</a></h3></div>
 <div class=".text_box-bulletpoints">
 <ul>
-<li>Metrik RMSE →  Konsistenz  der Einheit</li>
-<li>Single Horizon: drei Stunden in die Zukunft (n+3)</li>
+<li>Verwendung der Metrik RMSE →  Konsistenz  der Einheit</li>
+<li>RMSE von 1170 W</li>
+<li>Multi Horizon: ein Zeitraum von 24 Stunden in die Zukunft (n+1 - n+24)</li>
 </ul>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-<iframe frameborder="0" height="500vh" src="../1_plots/Zeitreihe_Lstm rmse_1151.4273223388366, Learningrate_0.0001, Sequenzen_192, Layer_1 Epochen_17, hidden_size_15, feature_set_feature_set0, prediction_column_pv_power2_n+3.html" width="100%"></iframe>
+<iframe frameborder="0" height="500vh" src="../1_plots/final/MultitimeHorizon rmse_1170 Learningrate_0.0001, Horrizon_24, Window_48, Layer_2, epoch_99, hidden_150, batch_8, pc_pv_power2_n+1, fh_27, ts_27.html" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -8119,12 +8120,12 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <h3 id="Evaluation-LSTM">Evaluation LSTM<a class="anchor-link" href="#Evaluation-LSTM">¶</a></h3></div>
 <div class=".text_box-bulletpoints">
 <ul>
-<li>Multi Horizon: ein Zeitraum von 12 Stunden in die Zukunft (n+1 - n+12)</li>
-<li>RMSE</li>
+<li>Single Horizon: drei Stunden in die Zukunft (n+3)</li>
+<li>RMSE: 1151 W</li>
 </ul>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-<iframe frameborder="0" height="500vh" src="../1_plots/multitime.html" width="100%"></iframe>
+<iframe frameborder="0" height="500vh" src="../1_plots/Zeitreihe_Lstm rmse_1151.4273223388366, Learningrate_0.0001, Sequenzen_192, Layer_1 Epochen_17, hidden_size_15, feature_set_feature_set0, prediction_column_pv_power2_n+3.html" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -8278,13 +8279,35 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <h3 id="Deployment">Deployment<a class="anchor-link" href="#Deployment">¶</a></h3></div>
 <div class=".text_box-bulletpoints">
 <ul>
+<li>Multitimehorizon (Window 48, Horizon 24, n+1)</li>
+<li>Wettervorhersage ab 16:00 22.12.2023 (UTC)</li>
+</ul>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<iframe frameborder="0" height="500vh" src="../1_plots/Zeitreihe_Deployment MultitimeHorizon LSTM - RMSE 668.6.html" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<!-- Slide 3 -->
+<div class="text-box-heading">
+<h3 id="Deployment">Deployment<a class="anchor-link" href="#Deployment">¶</a></h3></div>
+<div class=".text_box-bulletpoints">
+<ul>
 <li>Beispiel der autoregressiven Verwendung eines Single-Horizon-Modells mit der Wettervorhersage</li>
+<li>Hiernach ist die Datenleakage aufgefallen</li>
 </ul>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 <iframe frameborder="0" height="500vh" src="../1_plots/Zeitreihe_Deployment LSTM RMSE 4010.155729395651.html" width="100%"></iframe>
 </div>
-<hr/>
 </div>
 </div>
 </div>
@@ -8296,13 +8319,18 @@ document.querySelector('.reveal .slides').appendChild(dateElement);
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
-<h3 id="Ausblick-und-Verbesserungspotential">Ausblick und Verbesserungspotential<a class="anchor-link" href="#Ausblick-und-Verbesserungspotential">¶</a></h3></div>
+<h3 id="Ausblick-und-Ideen-zur-Verbesserung">Ausblick und Ideen zur Verbesserung<a class="anchor-link" href="#Ausblick-und-Ideen-zur-Verbesserung">¶</a></h3></div>
 <div class=".text_box-bulletpoints">
 <ul>
 <li>Eigene Bibliothek für das Datenhandling</li>
 <li>Training mit Daten höheren Intervalle (z.B. 15 min, 30 min)?</li>
-<li>Ensamble-Modell (z.B. Sommermodell und Wintermodell)</li>
-<li>Sammeln von Wettervorhersagen mit Angabe von Abweichungen und Training vollständig auf Wettervorhersagen statt historischen Wetterdaten</li>
+<li>Ensamble-Modell (z.B. Sommermodell und Wintermodell)?</li>
+<li>Datenerhebung von Wettervorhersagen und Training vollständig auf Wettervorhersagen statt historischen Wetterdaten</li>
+<li>Größere Varianz der Daten für ein generischeres Modell<ul>
+<li>Training von unterschiedlichen GPS-Standorten mit unterschiedlichen PV-Anlagen</li>
+<li>Ggf. Vergrößerung der Fenstergröße um dadurch die Ausrichtung und Größe der Anlage abzuleiten</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
