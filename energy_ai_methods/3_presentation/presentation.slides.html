@@ -7810,6 +7810,7 @@ Hochschule Ansbach</p>
 <div class="text-box-heading">
 <h2 id="Given-data:-electric-Demand">Given data: electric Demand<a class="anchor-link" href="#Given-data:-electric-Demand">¶</a></h2></div>
 <div class="empty-box">
+<br/>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
 <iframe frameborder="0" height="550vh" src="../1_plot/Zeitreihe_Electricity Demand normalized to 1kW.html" width="100%"></iframe>
@@ -7860,6 +7861,9 @@ Hochschule Ansbach</p>
 <!-- Slide 2 -->
 <div class="text-box-heading">
 <h2 id="Researched-data:-Wind-and-photovoltaic">Researched data: Wind and photovoltaic<a class="anchor-link" href="#Researched-data:-Wind-and-photovoltaic">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
 <ul>
 <li>Normalized pv data (from PV-GIS 30 degree south)</li>
 <li>Normalized wind data (from renewables.ninja based on merra2, 1500kW GE1.7)</li>
@@ -7880,6 +7884,9 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
 <h2 id="COP-based-on-the-outside-air-temperature">COP based on the outside air temperature<a class="anchor-link" href="#COP-based-on-the-outside-air-temperature">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
 <ul>
 <li>The weather station 5440 of the german weather service is located at Weissenburg-Emetzheim, it tracks the air temperature</li>
 <li>Air temperature of the year 2019</li>
@@ -7899,6 +7906,9 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
 <h2 id="Common-cop-curve">Common cop curve<a class="anchor-link" href="#Common-cop-curve">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
 <ul>
 <li>Interpolation of some points of a datasheet</li>
 <li>Minimum working temperature: -10°C Degree</li>
@@ -7918,6 +7928,9 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
 <h2 id="Result-cop-based-on-outside-temperature">Result cop based on outside temperature<a class="anchor-link" href="#Result-cop-based-on-outside-temperature">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
 <ol>
 <li>Set some example Datapoints (COP, Temperature) based on a datasheet of a heatpump</li>
 <li>Calculate for each temperature the cop</li>
@@ -7950,6 +7963,9 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
 <h2 id="System-Configuration:-Method">System Configuration: Method<a class="anchor-link" href="#System-Configuration:-Method">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
 <ol>
 <li>Investment optimization with oemof based on given and researched CAPEX and OPEX (cost optimized and co2 optimized)</li>
 <li>Doing a research on the web to ensure that the calculated sizes are feasible</li>
@@ -7969,6 +7985,9 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
 <h2 id="System-Configuration:-Cost-assumptions">System Configuration: Cost assumptions<a class="anchor-link" href="#System-Configuration:-Cost-assumptions">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
 <table>
 <thead>
 <tr>
@@ -8052,6 +8071,9 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
 <h2 id="Emission-assumptions">Emission assumptions<a class="anchor-link" href="#Emission-assumptions">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
 <p>The following emission of the energy carriers were used in the project:</p>
 <table>
 <thead>
@@ -8083,6 +8105,9 @@ Hochschule Ansbach</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
 <h2 id="System-Configuration:-sizing-of-the-components">System Configuration: sizing of the components<a class="anchor-link" href="#System-Configuration:-sizing-of-the-components">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
 <ul>
 <li>Three different size configurations</li>
 </ul>
@@ -8114,13 +8139,32 @@ Hochschule Ansbach</p>
 <td style="text-align:left">2264 kW</td>
 <td style="text-align:left">3000 kW    (Backup)</td>
 </tr>
+<tr>
+<td style="text-align:left">Wind turbine</td>
+<td style="text-align:left">3000 kW (max bound)</td>
+<td style="text-align:left">3000 kW  (max bound)</td>
+<td style="text-align:left">3000 kW  (max bound)</td>
+</tr>
+<tr>
+<td style="text-align:left">Ground mounted PV</td>
+<td style="text-align:left">3000 kW (max bound)</td>
+<td style="text-align:left">3000 kW  (max bound)</td>
+<td style="text-align:left">3000 kW (max bound)</td>
+</tr>
+<tr>
+<td style="text-align:left">Electrical Storage</td>
+<td style="text-align:left">0 kWh</td>
+<td style="text-align:left">115364 kWh</td>
+<td style="text-align:left">4000 kWh</td>
+</tr>
+<tr>
+<td style="text-align:left">Seasonal Storage</td>
+<td style="text-align:left">6765 kWh</td>
+<td style="text-align:left">106151 kWh</td>
+<td style="text-align:left">100000 kWh</td>
+</tr>
 </tbody>
 </table>
-<p>| Wind turbine                                 | 3000 kW (max bound)                                    | 3000 kW  (max bound)                               | 3000 kW
-(max bound)                                              |
-| Ground mounted PV                            | 3000 kW (max bound)                                    | 3000 kW  (max bound)                                   | 3000 kW (max bound)                                               |
-| Electrical Storage                           | 0 kWh                                    | 115364 kWh                               | 4000 kWh                                            |
-| Seasonal Storage                             | 6765 kWh                                 | 106151 kWh                               | 100000 kWh                                          |</p>
 </div>
 </div>
 </div>
