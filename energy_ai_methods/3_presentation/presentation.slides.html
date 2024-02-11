@@ -7442,6 +7442,112 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <!-- Slide Einstellungen -->
 <!-- jupyter-nbconvert --to slides presentation.ipynb --SlidesExporter.reveal_theme=white -->
+<!-- Textbox für Überschriften slide  -->
+<style>
+h1 {
+    color: #0075ad ;  /* Set the color to teal */
+}
+</style>
+<style>
+.text-box-picture {
+  position: static;
+  top: 18%;
+  left: 0%;
+  width: 100%;
+  /* border: 3px solid #73AD21; */
+  padding: 1%;
+  background-color: transparent;
+}
+
+.text_box-bulletpoints {
+  position: static;
+  top: 30%;
+  width: 100%;
+  left: 10%;
+  padding: 0.5%;
+}
+
+
+.text-box-heading {
+  position: static;
+  top: 0%;
+  left: 10%;
+  width: 70%;
+  /* border: 3px solid #73AD21; */
+  padding: 0.5%;
+  background-color: transparent;
+}
+
+.text-box-title {
+  position: static;
+  top: 30%;
+  left: 10%;
+  width: 90%;
+  /* border: 3px solid #73AD21; */
+  padding: 1%;
+  background-color: transparent;
+}
+
+/* Anzeigefehler wenn kleiner */
+@media screen and (max-width: 900px) {
+  .text-box-picture {
+    position: static;
+    width: 100%;
+    padding: 1%;
+  }
+  .text-box-title{
+    position: static;
+    width: 90%;
+    padding: 1%;
+  }
+  .text-box-heading {
+    position: static;
+    width: 70%;
+    padding: 1%;
+    top: 0%;
+    left: 10%;
+  }
+  .text_box-bulletpoints {
+    position: static;
+    width: 100%;
+    padding: 1%;
+  }
+
+
+}
+
+</style>
+<style>
+.text-box-title h1 {
+  color: #0075ad;
+}
+.text-box-title h2 {
+  color: #0075ad;
+}
+.text-box-title h3 {
+  color: #0075ad;
+}
+</style>
+<style>
+.text-box-heading h4 {
+  color: #0075ad;
+}
+</style>
+<style>
+.text-box-heading h3 {
+  color: #0075ad;
+}
+</style>
+<style>
+.text-box-heading h2 {
+  color: #0075ad;
+}
+</style>
+<style>
+.text-box-heading h1 {
+  color: #0075ad;
+}
+</style>
 <style>
 iframe {
     display: flex;
@@ -7474,12 +7580,18 @@ iframe {
     background-position: center center;
     background-repeat: no-repeat;
 }
+.reveal .background2 {
+    background-image: url('background2.png');
+     background-size: 100%100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 </style>
 <!-- Fußzeile -->
 <style>
 .reveal .slides > section:after {
     content: "Marco Obermeier - Energy Management with AI Methods";
-    font-size: 10px;
+    font-size: 13px;
     position: absolute;
     font-family: 'Arial', sans-serif;
     bottom: -20px;
@@ -7497,13 +7609,54 @@ dateElement.style.position = 'absolute';
 dateElement.style.bottom = '-20px';
 dateElement.style.left = '0';
 dateElement.style.padding = '10px';
-dateElement.style.fontSize = '10px';
+dateElement.style.fontSize = '13px';
 dateElement.style.fontFamily = 'Arial, sans-serif';
 dateElement.style.textAlign = 'right';
 dateElement.style.color = '#000';
 dateElement.innerHTML = currentDate;
 document.querySelector('.reveal .slides').appendChild(dateElement);
 </script>
+</div>
+</div>
+</div>
+</div>
+</aside><aside class="notes">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">qrcode</span>
+<span class="kn">from</span> <span class="nn">qrcode.image.svg</span> <span class="kn">import</span> <span class="n">SvgImage</span>
+
+<span class="c1"># Daten, die Sie im QR-Code codieren möchten</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s2">"https://obermarco.github.io/akii/4_presentation/presentation.slides.html#/"</span>
+
+<span class="c1"># Erstellen Sie ein QR-Code-Objekt</span>
+<span class="n">qr</span> <span class="o">=</span> <span class="n">qrcode</span><span class="o">.</span><span class="n">QRCode</span><span class="p">(</span>
+    <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">error_correction</span><span class="o">=</span><span class="n">qrcode</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">ERROR_CORRECT_H</span><span class="p">,</span>
+    <span class="n">box_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">border</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Fügen Sie Daten zum QR-Code hinzu</span>
+<span class="n">qr</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Kompilieren Sie die Daten in ein QR-Code-Array</span>
+<span class="n">qr</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">fit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Erstellen Sie ein Bild aus dem QR-Code-Array</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">qr</span><span class="o">.</span><span class="n">make_image</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">back_color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">image_factory</span><span class="o">=</span><span class="n">SvgImage</span><span class="p">)</span>
+
+<span class="c1"># Speichern Sie das Bild</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'qrcode.svg'</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

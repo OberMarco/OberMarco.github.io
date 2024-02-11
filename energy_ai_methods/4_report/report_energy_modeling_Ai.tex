@@ -1,0 +1,171 @@
+\documentclass[conference, xcolor=dvipsnames]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{ifthen}
+\usepackage{xargs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage[right]{eurosym}
+\usepackage[printonlyused]{acronym}
+\usepackage{subfig}
+\usepackage{floatflt}
+%\usepackage{xcolor}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+	
+	\title{Expose - Practical investigation of the influence of dynamic electricity prices (on residential buildings) in combination with a HEMS \\
+	}
+	
+	
+	\author{\IEEEauthorblockN{1\textsuperscript{st} B. Sc. Marco Obermeier}
+		\IEEEauthorblockA{\textit{Technology and Study Centre, Campus Feuchtwangen} \\
+			\textit{University of Applied Sciences, Ansbach}\\
+			Feuchtwangen, Germany \\
+			marco.obermeier@icloud.com}\\
+		\IEEEauthorblockN{3\textsuperscript{rd} M. Sc. Thomas Haupt}
+		\IEEEauthorblockA{\textit{Technology and Study Centre, Campus Feuchtwangen} \\
+			\textit{University of Applied Sciences, Ansbach}\\
+			Feuchtwangen, Germany \\
+			thomas.haupt@hs-ansbach.de}
+		\and
+		\IEEEauthorblockN{2\textsuperscript{nd} Prof. Dr.-Ing. Johannes Jungwirth}
+		\IEEEauthorblockA{\textit{Technology and Study Centre, Campus Feuchtwangen} \\
+			\textit{University of Applied Sciences, Ansbach}\\
+			Feuchtwangen, Germany \\
+			johannes.jungwirth@hs-ansbach.de}\\
+		
+		\IEEEauthorblockN{4\textsuperscript{th} B. Eng. Kevin Settler}
+		\IEEEauthorblockA{\textit{Technology and Study Centre, Campus Feuchtwangen} \\
+			\textit{University of Applied Sciences, Ansbach}\\
+			Feuchtwangen, Germany \\
+			kevin.settler@hs-ansbach.de}
+	}
+	
+	\maketitle
+	
+	\begin{abstract}
+		This document deals with the motivation and research questions of the second project work.
+	\end{abstract}
+	
+	\begin{IEEEkeywords}
+		energy management, energy optimization, dynamic spot market prices, HEMS, dynamic electricity tariffs
+	\end{IEEEkeywords}
+	
+	\section{Motivation}
+	On the electricity exchange in Europe \cite{r0}, prices fluctuate every 15 minutes. When renewable energy shares are high, prices are often lower \cite{r1}. Consumers who are flexible in terms of time can be operated optimally at the electricity exchange price with a dynamic grid tariff \cite{r2}\cite{r3}. Examples of temporally flexible consumers are:
+	\begin{itemize}
+		\item Charging stations for e-mobility
+		\item Heat pumps
+		\item Air conditioning systems
+	\end{itemize}
+If the flexible consumers are optimized to take advantage of the lower prices, the higher share of renewable energy will save money and carbon emissions at these times.
+	
+	
+	\section{Challenge}
+	The project work aims to investigate the impact of dynamic electricity tariffs on various technologies. A practical simulation will be created to study the influence of dynamic electricity tariffs.
+	
+	
+	\section{Research Question}
+	\begin{description}
+		\item [R1] Basics - How does a dynamic electricity tariff work?
+		\item [R2] Which electricity providers currently offer a dynamic electricity tariff on the market?
+			\begin{description}
+			\item [R2.a] How long is the binding of the contract? 
+			\item [R2.b] How does the practical integration of a dynamic tariff provider work ?
+			\item [R2.c] How is the price made up and what are the price differences between the providers?
+			\end{description}
+		\item [R3] What changes for the customer and how high is the risk of dynamic electricity tariffs compared to a static tariff?
+		\item [R4] How high is the financial potential of a dynamic electricity tariff in combination with flexible consumers and consumption patterns compared to comparable static tariffs on the market?
+		\begin{description}
+			\item [R4.a] Photovoltaic system
+			\item [R4.b] Heat pumps
+			\item [R4.c] Battery storage
+			\item [R4.d] Charging stations for e-mobility
+			\item [R4.e] Consumption patterns
+		\end{description}
+		\item [R5] What role does a HEMS have in relation to dynamic electricity tariffs?
+		\begin{description}
+		 \item [R5.a] Which HEMS already offer support for dynamic tariffs [Kevin]?
+		\item [R5.b] Is a HEMS and optimization of flexible consumers needed to benefit from dynamic tariffs?
+			\end{description}
+		
+	\end{description}
+
+	
+	
+	
+	
+	
+	\begin{thebibliography}{00}
+			
+		\bibitem{r0} EPEX SPOT SE (European Power Exchange) is an exchange for short-term wholesale power trading.  \url{https://www.epexspot.com/en/market-data}
+		
+		\bibitem{r1} Historical spot market prices  \url{https://www.energy-charts.info/charts/price_spot_market/chart.htm?l=de&c=DE}
+		\bibitem{r2} Example electricity provider for a dynamic electricity price dependent on the stock exchange \url{https://tibber.com/de}
+		\bibitem{r3} Example electricity provider for a dynamic electricity price dependent on the stock exchange \url{https://www.awattar.de/}
+		%\bibitem{r4} Example of energy management system  \url{https://www.tesvolt.com/de/produkte/energiemanagement-system-1.html}
+		
+		
+	
+		
+		
+		%\bibitem{r5} Example of some data services \url{https://github.com/mampfes/ha_epex_spot/blob/main/custom_components/epex_spot/EPEXSpot/Awattar/__init__.py}
+		
+		%\bibitem{r6} Impact of Dynamic Electricity Tariff and Home PV System Incentives on Electric Vehicle Charging Behavior: Study on Potential Grid Implications and Economic Effects for Households
+		%\textit{Simulation Based} \url{https://www.mdpi.com/1996-1073/15/3/1079}
+		%\bibitem{r6a} Impact of variable electricity price on heat pump operated buildings
+		%\textit{Simulation Based?} \url{https://open-research-europe.ec.europa.eu/articles/2-135}
+		
+		%\bibitem{r7} Representative electrical load profiles for residential buildings in Germany on a 1-second data basis \url{	https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/}
+		
+		
+		
+		%\bibitem{r8} Dynamic electricity pricing—Which programs do consumers prefer? \url{https://publikationen.bibliothek.kit.edu/1000045138/16742523}
+		
+		%\bibitem{r9} A novel dynamic pricing model for a microgrid of prosumers with photovoltaic systems \url{https://www.sciencedirect.com/science/article/pii/S0306261923005123}		
+		
+		%\bibitem{r10} Forecasting Solar Frauenhofer 
+	%\url{https://www.ise.fraunhofer.de/de/geschaeftsfelder/photovoltaik/photovoltaische-module-und-kraftwerke/solare-einstrahlungs-und-leistungsprognose.html#1637083779}
+	%\url{https://sci-hub.hkvisa.net/10.1109/jstars.2009.2020300}
+	 %\url{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b40351ec9f82f55db82978985d7f9ee908395bf1}		
+		
+		
+		
+		
+		%\bibitem{r18} Enabling optimal vehicle-to-grid operation in a DC microgrid \url{	https://ieeexplore.ieee.org/abstract/document/10194813
+%		}
+	
+		
+		%\bibitem{r6} PV-Forecast Experts and Projects \url{	https://www.ise.fraunhofer.de/de/geschaeftsfelder/photovoltaik/photovoltaische-module-und-kraftwerke/solare-einstrahlungs-und-leistungsprognose.html#1637083779
+%		}
+		
+		
+		%https://pdf.sciencedirectassets.com/280851/1-s2.0-S2211467X22X00023/1-s2.0-S2211467X2200181X/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCnbp1TgFyD1fi4pDMgpoBuC4ho2zEgAjjXOKAO37gGxgIhAPIrLqc5oTPzIMlUKyd1vp%2F9kQOg4DACKpVm0olpd%2Bn4KrsFCI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBRoMMDU5MDAzNTQ2ODY1IgzGyogamTo7yhj2ynwqjwVs2up5EE%2FgJ9MANjUY8Yuydu3q4X%2F9adN77SLyGM4cW22Xm1OanmKX%2B5tHT2PeTp6UuVRaZQJgUkPYuvUVWZHKSv6efmZSDsAxwNDeCEAfVxCX7S8GcYw2jKqASZ68Lk7Td2s%2BS7HDVloW%2FUWKlHJWRaWEaIp4q9llPvyLMTPsp6BIh0EeCsyKL3rg5N3e43Li7zqm0%2BMCA3IFKHPnbRU5w3ufqPTJJS1fjZ7RbmtZwlwWZ39%2BWQZ1XKGa1jCmqyfua40zK3m3hREfhKpvvPRJEGjp3tHYaMMyIuxblQYsy6FFsMpIdtsYPy7pB5c12BuSG3%2Bnwhze4rD5iDzfRwmzvPagELM7XotktULVFKwuhALk39ToJa%2Fyn0tRt5y79UbNAHbLV49mYic%2FKgvtjIBO6wx%2FKO4EmWytgOWxGj7KD3usxHmfG%2F8uy06%2Fqw%2FSmGuMD2wdFlOSp6z7EmW1EeMy2J5nCAWDYyXD%2BIW3hmriQLWJcdKlcDNoDBiiObSARD7a8nbXIH0gZogTeYKZqdEtSSrF0BS13WICX9V334jp2R3kHm4hck7AEb7%2Bp%2BrqDfeZLtsOPTh2ltwdm5MkN5MxyVZyrUPo%2Ba%2Fh%2BoDnSKtdss1eSIZB%2B7xWybECU0azMo9sAaU5mujG3wjFa0AT3v0yoVvzOb%2BTr1FcBG3eEW7k5SC5ClFXiPHIRa5QymcKH5PdD5mYd%2F9efHuO0Ano2Onlmpj25%2BMBAYjgbNLaCgfGFkpgHKyLGON2WxwoIqBTN0aYrjXaMO5TaxtloLaZmUm5ZXOOUmHeRkvyyKaR7%2FHm4Q49oUPGncjLzMcX5PARWs64QDFkiRJwpuYBOqTSTV23oBx6SLNNHOq8WdCviiPTMM%2BnsqcGOrABnNOIms6XS9SstlazMRG2AZfhClWXl7Q3R11EmglkapncmBtISg1RcxdRyMrzpNoomzQUZPGByT%2FgTW9LMF%2FXm2WIJnxX4fVoQbCgSdXOxDsbfjkJtFd5ZILiDz9pHcv2RHQg2WB0i5OOwrEkNwhkHQpxEcceZIfKZ9jwEi6xK3QsRgqHvIzKziKTvJI1FXqkZkxFclsCmeQRx0aKfBl2MP4M0dZr9jOUhJ8LCYU3tdU%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230828T131730Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYXBKMYLU2%2F20230828%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=409631bdd218c87f2b0fb8344e629b0e2d0e7dc34781c715ba60f2852b7fcd16&hash=f2650111f0a384a914623088dbe36169e2a08fcf0a50ee13b6084190985c7642&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2211467X2200181X&tid=spdf-94f11288-7d7f-4925-80f3-f35bb303e993&sid=d4de97fd3ee403469b1bb656ac60cf2d9a7dgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=1e035705000d035b075157&rr=7fdcd5b65a8d195c&cc=de
+		
+		
+	
+		
+		%http://192.168.20.123:3000/d/PWzJUDK4k/filtering_tests?orgId=1&from=1657852700430&to=1657863239522&viewPanel=2
+		
+	\end{thebibliography}
+
+
+
+	
+\end{document}
