@@ -7482,7 +7482,11 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="System-Design-of-a-cross-sectoral-energy-system-for-heating-of-a-city-in-southern-Germany---System-Technical-Report">System Design of a cross-sectoral energy system for heating of a city in southern Germany - System Technical Report<a class="anchor-link" href="#System-Design-of-a-cross-sectoral-energy-system-for-heating-of-a-city-in-southern-Germany---System-Technical-Report">¶</a></h1>
+<h1 id="System-Design-of-a-cross-sectoral-energy-system-for-heating-of-a-city-in-southern-Germany---System-Technical-Report">System Design of a cross-sectoral energy system for heating of a city in southern Germany - System Technical Report<a class="anchor-link" href="#System-Design-of-a-cross-sectoral-energy-system-for-heating-of-a-city-in-southern-Germany---System-Technical-Report">¶</a></h1><p><strong>Author:</strong> Marco Obermeier: Master Student of Applied Research in Engineering Science<br/>
+<strong>Marticle Number:</strong> 00165198<br/>
+<strong>University:</strong> Hochschule Ansbach<br/>
+<strong>Date:</strong> 12.02.2024<br/>
+<strong>Location:</strong> Ansbach</p>
 </div>
 </div>
 </div>
@@ -7493,9 +7497,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Abstract">Abstract<a class="anchor-link" href="#Abstract">¶</a></h2><p>This technical report outlines the system design for a cross-sectoral energy system in Weissenburg, a city in southern Germany, aimed at optimizing heating solutions. The project focuses on the integration of advanced energy components to enhance efficiency and sustainability. The primary components of the proposed system include a heat pump, photovoltaic (PV), a wind farm, a backup or peak load system, large-scale thermal storage for seasonal demands, and a connection to the public grid. Utilizing the oemof framework, the system components are meticulously dimensioned, and an optimized operation schedule is crafted, ensuring the fossil heat source share does not exceed 35%. Two distinct system configurations are investigated: CO2-optimized and price-optimized, both assessed in terms of yearly CAPEX, OPEX, and levelized costs of energy.</p>
-<p>The project extensively utilizes data from 2019, including normalized profiles for heat and electricity demand and specific cost and emission assumptions for various energy carriers. Detailed cost assumptions and emission data are incorporated into the system design, ensuring a comprehensive and accurate representation. The system design process is multifaceted, focusing on component selection, optimal sizing, and the establishment of an efficient operational schedule. This approach, supported by substantial research data, including temperature-dependent COP calculations for heat pumps and normalized profiles for PV and wind energy, ensures a robust and versatile energy solution for Weissenburg.</p>
-<p>In summary, the system design presents a sustainable and efficient approach to heating in Weissenburg, demonstrating the potential of cross-sectoral energy systems in urban contexts. The project not only addresses immediate heating needs but also contributes to the broader goals of energy transition and sustainability through its innovative use of renewable energy sources and optimization strategies.</p>
+<h2 id="Abstract">Abstract<a class="anchor-link" href="#Abstract">¶</a></h2><p>This technical system report presents the design of an integrated energy system for Weissenburg, Germany, to enhance heating efficiency and sustainability. It incorporates advanced components like heat pumps, solar PV, wind power, a peak load system, large thermal storage, and grid connection. Using the oemof framework, the system is precisely sized with an optimized operation plan, keeping fossil fuel use below 35%. It explores two setups: CO2 and cost-optimized, evaluated by annual costs and levelized costs of energy. The project leverages 2019 data for a detailed and accurate design, offering a sustainable heating solution for Weissenburg and advancing energy transition goals.</p>
 </div>
 </div>
 </div>
@@ -7529,6 +7531,7 @@ a.anchor-link {
 </ol>
 </li>
 <li><a href="#cost-calculations">Cost Calculations</a></li>
+<li><a href="#modeling-details">Modeling Details</a></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#discussion">Discussion</a></li>
 <li><a href="#table-of-all-model-parameters">Table of All Model Parameters</a></li>
@@ -7823,7 +7826,7 @@ The diagramm below shows the normalized profiles:</p>
 </table>
 <p>The follwing additional price researches were conducted to make assumptions:</p>
 <ul>
-<li>The costs of a 2.750 m³ <a href="https://www.saisonalspeicher.de/home/projekte/projekte-in-deutschland/hannover/">heat storage in hannover</a> are 664.680 €. Its the most expensive in the provided graph of large scale heatstorage (TTES). Assuming all consumers have underfloor heating and domestic hot water is heated locally and not included in the given heating load profile. If we assume a typical temperature difference of 35 degrees with a return temperature (T-return) of 25 degrees and a supply temperature (T-supply) of 60 degrees, the costs of the thermal storage are  5,94€ /kWh (111.917 kWh= Q = m<em>c</em>deltaT).</li>
+<li>The costs of a 2.750 m³ <a href="https://www.saisonalspeicher.de/home/projekte/projekte-in-deutschland/hannover/">heat storage in hannover</a> are 664.680 €. Its the most expensive in the provided graph of large scale heatstorage (TTES). Assuming all consumers have underfloor heating and domestic hot water is heated locally and not included in the given heating load profile. If we assume a typical temperature difference of 35 degrees with a return temperature (T-return) of 25 degrees and a supply temperature (T-supply) of 60 degrees, the costs of the thermal storage are  5,94€ /kWh ($ 111.917 kWh= Q = m*c*deltaT $).</li>
 <li>In <a href="https://www.npro.energy/main/de/help/economic-parameters">NPro</a>, an another energy simulation tool, <a href="https://ens.dk/sites/ens.dk/files/Analyser/technology_data_catalogue_for_el_and_dh.pdf">a document of the danish energy agency</a> is mentioned. The economic parameters of a wind farm are 1000 €/kW.</li>
 <li>According to the <a href="https://www.energieatlas.bayern.de/thema_wind/windenergie_wissen/daten">Energy Atlas of Bavaria</a>, the capex cost of a typical wind farm ranges between 1400 €/kW and 2000 €/kW.</li>
 <li>The price for a <a href="https://energetechsolar.com/1mwh-500v-800v-battery-energy-storage-system">1 MWh large size battery storage system is 438.000$.</a></li>
@@ -7841,12 +7844,11 @@ The diagramm below shows the normalized profiles:</p>
 This is the temperature of the year 2019:</p>
 <iframe frameborder="0" height="250vh" src="1_plot/Zeitreihe_Air temperature of german weather station DWD 5440.html" width="90%"></iframe>
 <!-- ![air temperature 2019](1_plot/Zeitreihe_Air%20temperature%20of%20german%20weather%20station%20DWD%205440.svg) -->
-Based on the temperature and on a typical COP curve a temperature dependent COP is calculated. 
-The following diagramm shows the common COP curve based on a [data sheet of a heatpump](https://www.dimplex-partner.de/fileadmin/dimplex/downloads/projektierungshandbuecher/de/496-geraeteinformationen-wp-08-2012.pdf):
-
+<p>Based on the temperature and on a typical COP curve a temperature dependent COP is calculated.
+The following diagramm shows the common COP curve based on a  <a href="https://www.dimplex-partner.de/fileadmin/dimplex/downloads/projektierungshandbuecher/de/496-geraeteinformationen-wp-08-2012.pdf">data sheet of a heatpump</a>:</p>
 <iframe frameborder="0" height="250vh" src="1_plot/Zeitreihe_COP based on temperature - common cop curve.html" width="90%"></iframe>
 <!-- ![cop based on the temperature](1_plot/Zeitreihe_COP%20based%20on%20temperature%20-%20common%20cop%20curve.svg) -->
-The following diagramms shows the result of the calculation of the cop based on the temperature (The first diagram displays the COP in the year 2019, while the second one additionally includes the temperature.):
+<p>The following diagramms shows the result of the calculation of the cop based on the temperature (The first diagram displays the COP in the year 2019, while the second one additionally includes the temperature.):</p>
 <!-- <iframe src="1_plot/Zeitreihe_COP%20based%20on%20temperature.html" width="90%" height="250vh" frameborder="0"></iframe> -->
 <!-- ![cop based on temperature](1_plot/Zeitreihe_COP%20based%20on%20temperature.svg) -->
 <iframe frameborder="0" height="350vh" src="1_plot/Zeitreihe_COP based on temperature 2019.html" width="90%"></iframe>
@@ -8205,11 +8207,10 @@ The following table shows the optimized sizes of the investment optimization and
 <h2 id="Summarize">Summarize<a class="anchor-link" href="#Summarize">¶</a></h2><p>In the "System Design" chapter, a cross-sectoral energy system was developed, focusing heavily on renewable sources to limit fossil heat sources to 35%. The system, including a heat pump, PV/solar units, backup system, thermal storage, and grid connection, was designed using oemof. Four configurations were examined: CO2-optimized, price-optimized, and their real-world adaptations.</p>
 <p>The "Cost Calculations" chapter analyzed the financial aspects, detailing yearly CAPEX, OPEX, and Levelized Cost of Energy (LCOE), providing insights for enhancing the system's sustainability and economic efficiency.</p>
 <p>Cost of Energy:
-Levelized Costs of Heat are lower in the cost-optimized scenario (0.055 €/kWh) compared to the CO2-optimized scenario (0.076 €/kWh).
-Levelized Costs of Electricity also follow a similar trend, being more economical in the cost-optimized model (0.076 €/kWh) than in the CO2-optimized one (0.135 €/kWh).
-CO2 Emissions:
-CO2 emissions are significantly reduced in the CO2-optimized configuration, dropping to 0 t CO2 compared to 365 t CO2 in the cost-optimized model.
-The study delineates the inherent trade-offs between economic efficiency and environmental sustainability, providing a nuanced understanding of the system's performance under different optimization strategies. The real-world scenarios offer practical insights, revealing the feasible middle ground between theoretical models and operational reality.</p>
+Levelized Costs of Heat are lower in the cost-optimized scenario (0.059 €/kWh) compared to the CO2-optimized scenario (0.115 €/kWh).
+The Levelized Costs of Electricity also follow a similar trend, being more economical in the cost-optimized model (0.099 €/kWh) than in the CO2-optimized one (1.083 €/kWh). This is largely due to the significantly larger battery storage calculated in the CO2-optimized model.</p>
+<p>CO2 Emissions:
+In the CO2-optimized setup, CO2 emissions drop to <strong>15 t</strong> from <strong>641 t</strong> in the cost-optimized model. The study highlights the trade-offs between economy and environment, and offers feasible components in the real world scenario to close the gap between theory and reality.</p>
 </div>
 </div>
 </div>
@@ -8550,6 +8551,15 @@ The study delineates the inherent trade-offs between economic efficiency and env
 <li>Dimplex Partner, "Data sheet for air-water heat pump performance," [Online P.4]. Available: <a href="https://www.dimplex-partner.de/fileadmin/dimplex/downloads/projektierungshandbuecher/de/496-geraeteinformationen-wp-08-2012.pdf">https://www.dimplex-partner.de/fileadmin/dimplex/downloads/projektierungshandbuecher/de/496-geraeteinformationen-wp-08-2012.pdf</a>.</li>
 <li>Energieatlas Bayern, "Wind," [Online]. Available: <a href="https://www.karten.energieatlas.bayern.de/start/?c=634689,5429051&amp;z=10.684&amp;l=atkis,16e00f5d-9389-417f-a774-7f055fd45d2b&amp;t=wind">https://www.karten.energieatlas.bayern.de/start/?c=634689,5429051&amp;z=10.684&amp;l=atkis,16e00f5d-9389-417f-a774-7f055fd45d2b&amp;t=wind</a>.</li>
 </ol>
+<h2 id="Component-Information">Component Information<a class="anchor-link" href="#Component-Information">¶</a></h2><ul>
+<li>Gas-fired CHP: <a href="https://www.sokratherm.de/blockheizkraftwerke/blockheizkraftwerk-400-kw-klasse/">50kW, 100kW, 200kW, 400kW, 500kW, 700kW Sokratherm CHP</a></li>
+<li>Large Heat Pump: <a href="https://grosswaermepumpen-kongress.com/wp-content/uploads/2019/05/Christoph_Brechbuehler-Claudio_Mueller.pdf">5kW to 4000kW Examples of CTA AG</a></li>
+<li>Heating Element: <a href="https://www.ave-berlin.de/projekt/power-to-heat-anlage/">Berlin Adlershof project</a></li>
+<li>Wind Turbine: <a href="https://www.wind-turbine-models.com/turbines/832-enercon-e-115-3.000">Enercon E-115 3.000</a></li>
+<li>Ground Mounted PV: <a href="https://www.sunevosolar.com/3mw-utility-scale-solar-energy-plant_n24">Example of 3MW</a></li>
+<li>Electrical Storage: <a href="https://energetechsolar.com/1mwh-500v-800v-battery-energy-storage-system">Energetech Solar 1 MWh model</a></li>
+<li>Seasonal Storage: <a href="https://www.saisonalspeicher.de/home/projekte/projekte-in-deutschland/hannover/">Hannover</a></li>
+</ul>
 </div>
 </div>
 </div>
