@@ -7711,7 +7711,7 @@ Applied University of Ansbach</p>
 <div class="text-box-heading">
 <h2 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h2></div>
 <hr/>
-<h3 id="1.-Taskunderstanding-&amp;-Given-Data">1. Taskunderstanding &amp; Given Data<a class="anchor-link" href="#1.-Taskunderstanding-&amp;-Given-Data">¶</a></h3><h3 id="2.-System-Design">2. System Design<a class="anchor-link" href="#2.-System-Design">¶</a></h3><h3 id="3.-System-Configuration">3. System Configuration<a class="anchor-link" href="#3.-System-Configuration">¶</a></h3><h3 id="4.-Calculation-of-Costs-and-Result-Analysis">4. Calculation of Costs and Result Analysis<a class="anchor-link" href="#4.-Calculation-of-Costs-and-Result-Analysis">¶</a></h3><h3 id="5.-Detailed-Investigation-of-the-Cost-Optimized-Real-World-Scenario">5. Detailed Investigation of the Cost Optimized Real World Scenario<a class="anchor-link" href="#5.-Detailed-Investigation-of-the-Cost-Optimized-Real-World-Scenario">¶</a></h3><hr/>
+<h3 id="1.-Taskunderstanding-&amp;-Given-Data">1. Taskunderstanding &amp; Given Data<a class="anchor-link" href="#1.-Taskunderstanding-&amp;-Given-Data">¶</a></h3><h3 id="2.-System-Design">2. System Design<a class="anchor-link" href="#2.-System-Design">¶</a></h3><h3 id="3.-System-Configuration">3. System Configuration<a class="anchor-link" href="#3.-System-Configuration">¶</a></h3><h3 id="4.-Calculation-of-Levelized-Costs-and-Results">4. Calculation of Levelized Costs and Results<a class="anchor-link" href="#4.-Calculation-of-Levelized-Costs-and-Results">¶</a></h3><h3 id="5.-Detailed-Investigation">5. Detailed Investigation<a class="anchor-link" href="#5.-Detailed-Investigation">¶</a></h3><hr/>
 </div>
 </div>
 </div>
@@ -8336,8 +8336,65 @@ Applied University of Ansbach</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-title">
+<h1 id="Calculation-of-Levelized-Costs-and-Results">Calculation of Levelized Costs and Results<a class="anchor-link" href="#Calculation-of-Levelized-Costs-and-Results">¶</a></h1></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="text-box-heading">
-<h2 id="System-Configuration:-Results">System Configuration: Results<a class="anchor-link" href="#System-Configuration:-Results">¶</a></h2></div>
+<h2 id="Calculation-of-Levelized-Costs:-Method">Calculation of Levelized Costs: Method<a class="anchor-link" href="#Calculation-of-Levelized-Costs:-Method">¶</a></h2></div>
+<div class="empty-box">
+<br/>
+</div>
+<p>The following steps provide a detailed procedure for calculating the levelized costs of energy:</p>
+<p><strong>Initial Step:</strong> The CAPEX and OPEX are backpropagated to electricity and heat. This is achieved by determining scaling factors for cross-sectoral components such as the chp, wind farm, and photovoltaic system. For instance, a scaling factor of 100% for renewables implies that all costs are backpropagated to the levelized costs of electricity.</p>
+<p>There are two key scaling factors:</p>
+<ul>
+<li>Scaling factor of the CHP<ul>
+<li>This is a parameter that is preset to 0.6.</li>
+</ul>
+</li>
+<li>Scaling factor of the renewables<ul>
+<li>The calculation of this scaling factor involves dividing the amount of energy directed to the heat sector by the electricity produced by the renewables.</li>
+</ul>
+</li>
+</ul>
+<p>Steps to calculate the total costs of electricity:</p>
+<ol>
+<li>CAPEX: Calculate the total investment costs backpropagated to electricity</li>
+<li>OPEX: Calculate the total operational costs backpropagated to electricity</li>
+<li>Calculate the revenue of grid feed in</li>
+<li>Calculate the total costs of electricity</li>
+<li>Calculate the total electricity generation</li>
+<li>Calculate the levelized costs of electricity</li>
+</ol>
+<p>Steps to calculate the levelized costs of heat:</p>
+<ol>
+<li>CAPEX: Calculate the total investment costs backpropagated to heat</li>
+<li>OPEX: Calculate the total operational costs backpropagated to heat</li>
+<li>Calculate the total costs of heat</li>
+<li>Calculate the total heat consumption</li>
+<li>Calculate the levelized costs of heat</li>
+</ol>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-heading">
+<h2 id="Calculation-of-Levelized-Costs:-Results">Calculation of Levelized Costs: Results<a class="anchor-link" href="#Calculation-of-Levelized-Costs:-Results">¶</a></h2></div>
 <div class="empty-box">
 <br/>
 </div>
@@ -8407,6 +8464,18 @@ Applied University of Ansbach</p>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="text-box-title">
+<h1 id="Detailed-Investigation">Detailed Investigation<a class="anchor-link" href="#Detailed-Investigation">¶</a></h1></div>
 </div>
 </div>
 </div>
